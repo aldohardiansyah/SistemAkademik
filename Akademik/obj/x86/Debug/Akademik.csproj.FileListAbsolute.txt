@@ -1,0 +1,13 @@
+D:\KadudApp\Akademik\Akademik\bin\x86\Debug\Akademik.exe
+D:\KadudApp\Akademik\Akademik\bin\x86\Debug\Akademik.pdb
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.Properties.Resources.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.csproj.GenerateResource.Cache
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.exe
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.pdb
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.MASTER.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.PSB.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.PanitiaUjian.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.Keuangan.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.HalamanUtama.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.Siswa.resources

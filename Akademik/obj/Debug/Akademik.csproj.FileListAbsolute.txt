@@ -1,0 +1,8 @@
+D:\KadudApp\Akademik\Akademik\bin\Debug\Akademik.exe
+D:\KadudApp\Akademik\Akademik\bin\Debug\Akademik.pdb
+D:\KadudApp\Akademik\Akademik\obj\Debug\ResolveAssemblyReference.cache
+D:\KadudApp\Akademik\Akademik\obj\Debug\Akademik.Form1.resources
+D:\KadudApp\Akademik\Akademik\obj\Debug\Akademik.Properties.Resources.resources
+D:\KadudApp\Akademik\Akademik\obj\Debug\Akademik.csproj.GenerateResource.Cache
+D:\KadudApp\Akademik\Akademik\obj\Debug\Akademik.exe
+D:\KadudApp\Akademik\Akademik\obj\Debug\Akademik.pdb
