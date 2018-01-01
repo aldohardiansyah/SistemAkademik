@@ -66,6 +66,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Guru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Guru.Designer.cs">
+      <DependentUpon>Guru.cs</DependentUpon>
+    </Compile>
     <Compile Include="HalamanUtama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,8 +96,18 @@
     <Compile Include="PanitiaUjian.Designer.cs">
       <DependentUpon>PanitiaUjian.cs</DependentUpon>
     </Compile>
+    <Compile Include="Penjadwalan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Penjadwalan.Designer.cs">
+      <DependentUpon>Penjadwalan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Guru.resx">
+      <DependentUpon>Guru.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="HalamanUtama.resx">
       <DependentUpon>HalamanUtama.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -106,6 +122,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PanitiaUjian.resx">
       <DependentUpon>PanitiaUjian.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Penjadwalan.resx">
+      <DependentUpon>Penjadwalan.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

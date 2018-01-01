@@ -1,0 +1,9 @@
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\ResolveAssemblyReference.cache
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.HalamanLogin.resources
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.Properties.Resources.resources
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.csproj.GenerateResource.Cache
+D:\KadudApp\Akademik\TeacherSite\bin\Debug\TeacherSite.exe
+D:\KadudApp\Akademik\TeacherSite\bin\Debug\TeacherSite.pdb
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.exe
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.pdb
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.HalamanTSGuru.resources

@@ -19,150 +19,6 @@ namespace Akademik
             InitializeComponent();
         }
 
-
-        //---------------------MENU MASTER BIODATA----------------------//
-        private void buttonSimpanMasterBiodata_Click(object sender, EventArgs e)
-        {
-            #region nilai tidak di isi
-            //Cek Data Yang Ga Diisi//
-            if (textBoxNamaLengkapMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Nama Lengkap belum diisi Gan"); }
-            else if (textBoxNamaPanggilanMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Nama Panggilannya belum diisi Gan"); }
-            else if (textBoxTempatLhrMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Tempat Lahir belum diisi Gan"); }
-            else if (dateTimePickerTanggalLhrMasterBiodata.Value.ToString() == string.Empty)
-            { MessageBox.Show("Tanggal belum diisi Gan"); }
-            else if (comboBoxJenisKelaminMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Jenis Kelamin belum diisi Gan"); }
-            else if (comboBoxAgamaMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Agama belum diisi Gan"); }
-            else if (textBoxHobbyMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Hobi belum diisi Gan"); }
-            else if (textBoxCitaMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Cita-cita belum diisi Gan"); }
-            else if (textBoxBahasaMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Bahasa belum diisi Gan"); }
-            else if (textBoxKewarganegaraanMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Kewarganegaraan belum diisi Gan"); }
-            else if (comboBoxStatusKlgMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Status Keluarga belum diisi Gan"); }
-            else if (comboBoxEkoKlgMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Keadaan Ekonomi belum diisi Gan"); }
-            else if (textBoxAlamatMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Alamat belum diisi Gan"); }
-            else if (textBoxAlamatSkrgMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Alamat Sekarang belum diisi Gan"); }
-            else if (textBoxTinggalMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Tinggal Bersama belum diisi Gan"); }
-            else if (comboBoxKeadaan_RumahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Keadaan Rumah belum diisi Gan"); }
-            else if (comboBoxR_TidurMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Ruang Tidur belum diisi Gan"); }
-            else if (comboBoxR_BelajarMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Ruang Belajar belum diisi Gan"); }
-            else if (comboBoxPenunjangBelajarMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Penunjang Belajar belum diisi Gan"); }
-            else if (textBoxNo_TlpMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("No. Telp belum diisi Gan"); }
-            else if (textBoxEmailMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Email belum diisi Gan"); }
-            else if (textBoxNama_AyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Nama Ayah belum diisi Gan"); }
-            else if (textBoxTempat_Lhr_AyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Tempat Lahir Ayah belum diisi Gan"); }
-            else if (dateTimePickerTanggal_Lhr_AyahMasterBiodata.Value.ToString() == string.Empty)
-            { MessageBox.Show("Tanggal Lahir Ayah belum diisi Gan"); }
-            else if (textBoxAlamat_AyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Alamat Ayah belum diisi Gan"); }
-            else if (comboBoxAgama_AyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Agama belum diisi Gan"); }
-            else if (textBoxPekerjaan_AyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Pekerjaan Ayah belum diisi Gan"); }
-            else if (textBoxPendidikan_AyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Pendidikan Ayah belum diisi Gan"); }
-            else if (textBoxPenghasilanAyahMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Penghasilan Ayah belum diisi Gan"); }
-            else if (textBoxNama_IbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Nama Ibu belum diisi Gan"); }
-            else if (textBoxTempat_Lhr_IbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Tempat Lahir Ibu belum diisi Gan"); }
-            else if (dateTimePickerTanggal_Lhr_IbuMasterBiodata.Value.ToString() == string.Empty)
-            { MessageBox.Show("Tanggal Lahir Ibu belum diisi Gan"); }
-            else if (textBoxAlamat_IbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Alamat Ibu belum diisi Gan"); }
-            else if (comboBoxAgamaIbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Agama Ibu belum diisi Gan"); }
-            else if (textBoxPekerjaan_IbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Pekerjaan Ibu belum diisi Gan"); }
-            else if (textBoxPendidikan_IbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Pendidikan Ibu belum diisi Gan"); }
-            else if (textBoxPenghasilan_IbuMasterBiodata.Text.Trim() == string.Empty)
-            { MessageBox.Show("Penghasilan Ibu belum diisi Gan"); }
-            #endregion
-            else
-            {
-                OleDbConnection koneksi = new OleDbConnection(db);
-                koneksi.Open();
-
-                string query = "";
-                query = "INSERT INTO MASTER_BIODATA (TANGGAL_DAFTAR, NAMA_LENGKAP, NAMA, " +
-                        "TEMPAT_LHR, TANGGAL_LHR, JENIS_KEL, AGAMA, HOBBY, CITA, " +
-                        "BAHASA, KEWARGANEGARAAN, STATUS_KLG, EKO_KLG, ALAMAT, ALAMAT_SKRG, " +
-                        "TINGGAL, KEADAAN_RUMAH, R_TIDUR, R_BELAJAR, PENUNJANG_BELAJAR, " +
-                        "NO_TLP, EMAIL, NAMA_AYAH, TEMPAT_LHR_AYAH, TANGGAL_LHR_AYAH, ALAMAT_AYAH, AGAMA_AYAH, " +
-                        "PEKERJAAN_AYAH, PENDIDIKAN_AYAH, PENGHASILAN_AYAH, NAMA_IBU, TEMPAT_LHR_IBU," +
-                        "TANGGAL_LHR_IBU, ALAMAT_IBU, AGAMA_IBU, PEKERJAAN_IBU, PENDIDIKAN_IBU, " +
-                        "PENGHASILAN_IBU ) VALUES ('"
-                        + DateTime.Now.ToString() + "', '"  //TANGGAL_DAFTAR
-                        + textBoxNamaLengkapMasterBiodata.Text.Replace("'", "''") + "', '" //NAMA_LENGKAP
-                        + textBoxNamaPanggilanMasterBiodata.Text.Replace("'", "''") + "', '" // NAMA
-                        + textBoxTempatLhrMasterBiodata.Text.Replace("'", "''") + "', '" //TEMPAT_LHR
-                        + dateTimePickerTanggalLhrMasterBiodata.Value.ToString() + "', '"  //TANGGAL_LHR
-                        + comboBoxJenisKelaminMasterBiodata.Text.Replace("'", "''") + "', '" //JENIS_KEL
-                        + comboBoxAgamaMasterBiodata.Text.Replace("'", "''") + "', '" //AGAMA
-                        + textBoxHobbyMasterBiodata.Text.Replace("'", "''") + "', '" //HOBBY
-                        + textBoxCitaMasterBiodata.Text.Replace("'", "''") + "', '" //CITA
-                        + textBoxBahasaMasterBiodata.Text.Replace("'", "''") + "', '" //BAHASA
-                        + textBoxKewarganegaraanMasterBiodata.Text.Replace("'", "''") + "', '" //KEWARGANEGARAAN
-                        + comboBoxStatusKlgMasterBiodata.Text.Replace("'", "''") + "', '" //STATUS_KLG
-                        + comboBoxEkoKlgMasterBiodata.Text.Replace("'", "''") + "', '" //EKO_KLG
-                        + textBoxAlamatMasterBiodata.Text.Replace("'", "''") + "', '" //ALAMAT
-                        + textBoxAlamatSkrgMasterBiodata.Text.Replace("'", "''") + "', '" //ALAMAT_SKRG
-                        + textBoxTinggalMasterBiodata.Text.Replace("'", "''") + "', '"// TINGGAL
-                        + comboBoxKeadaan_RumahMasterBiodata.Text.Replace("'", "''") + "', '"//KEADAAN_RUMAH
-                        + comboBoxR_TidurMasterBiodata.Text.Replace("'", "''") + "', '" //R_TIDUR
-                        + comboBoxR_BelajarMasterBiodata.Text.Replace("'", "''") + "', '" //R_BELAJAR
-                        + comboBoxPenunjangBelajarMasterBiodata.Text.Replace("'", "''") + "', '" //PENUNJANG_BELAJAR
-                        + textBoxNo_TlpMasterBiodata.Text.Replace("'", "''") + "', '" //NO_TLP
-                        + textBoxEmailMasterBiodata.Text.Replace("'", "''") + "', '" //EMAIL
-                        + textBoxNama_AyahMasterBiodata.Text.Replace("'", "''") + "', '" //NAMA_AYAH
-                        + textBoxTempat_Lhr_AyahMasterBiodata.Text.Replace("'", "''") + "', '" //TEMPAT_LHR_AYAH
-                        + dateTimePickerTanggal_Lhr_AyahMasterBiodata.Value.ToString() + "', '" //TANGGAL_LAHIR_AYAH
-                        + textBoxAlamat_AyahMasterBiodata.Text.Replace("'", "''") + "', '" //ALAMAT_AYAH
-                        + comboBoxAgama_AyahMasterBiodata.Text.Replace("'", "''") + "', '" //AGAMA_AYAH
-                        + textBoxPekerjaan_AyahMasterBiodata.Text.Replace("'", "''") + "', '" //PEKERJAAN_AYAH
-                        + textBoxPendidikan_AyahMasterBiodata.Text.Replace("'", "''") + "', " //PENDIDIKAN_AYAH
-                        + textBoxPenghasilanAyahMasterBiodata.Text.Replace("'", "''") + ", '" //PENGHASILAN_AYAH
-                        + textBoxNama_IbuMasterBiodata.Text.Replace("'", "''") + "', '" //NAMA_IBU
-                        + textBoxTempat_Lhr_IbuMasterBiodata.Text.Replace("'", "''") + "', '" //TEMPAT_LHR_IBU
-                        + dateTimePickerTanggal_Lhr_IbuMasterBiodata.Value.ToString() + "', '" //TANGGAL_LHR_IBU
-                        + textBoxAlamat_IbuMasterBiodata.Text.Replace("'", "''") + "', '" //ALAMAT_IBU
-                        + comboBoxAgamaIbuMasterBiodata.Text.Replace("'", "''") + "', '" //AGAMA_IBU
-                        + textBoxPekerjaan_IbuMasterBiodata.Text.Replace("'", "''") + "', '" //PEKERJAAN_IBU
-                        + textBoxPendidikan_IbuMasterBiodata.Text.Replace("'", "''") + "', " //PENDIDIKAN_IBU
-                        + textBoxPenghasilan_IbuMasterBiodata.Text.Replace("'", "''") + ")"; //PENGHASILAN_IBU //END
-
-                OleDbCommand komen = new OleDbCommand();
-                komen.CommandText = query;
-                komen.Connection = koneksi;
-                komen.ExecuteNonQuery();
-                koneksi.Close();
-                MessageBox.Show("Data Berhasil Disimpan");
-                Data();
-            }
-        }
-
         //---------------------MENU MASTER JURUSAN----------------------//
         private void buttonSimpanJurusan_Click(object sender, EventArgs e)
         {
@@ -186,6 +42,57 @@ namespace Akademik
                 DataMasterJurusan();
             }
         }
+
+        private void dataGridViewMasterTahunAjaran_DoubleClick(object sender, EventArgs e)
+        {
+            OleDbConnection koneksi = new OleDbConnection(db);
+            koneksi.Open();
+            string IDCari = dataGridViewMasterTahunAjaran.CurrentRow.Cells["ID_TAHUNAJARAN"].Value.ToString();
+
+            string query = "";
+            query = "SELECT * FROM MASTER_TAHUNAJARAN WHERE ID_TAHUNAJARAN = " + IDCari + "";
+            OleDbCommand komen = new OleDbCommand();
+            komen.CommandText = query;
+            komen.Connection = koneksi;
+            OleDbDataAdapter da = new OleDbDataAdapter(komen);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                #region AmbilDataDariTabel
+                string TAHUN = dt.Rows[0]["TAHUN"].ToString();
+                string SEMESTER = dt.Rows[0]["SEMESTER"].ToString();
+
+                textBox_TA.Text = TAHUN;
+                textBox_SMSTR.Text = SEMESTER;
+                #endregion
+
+            }
+            koneksi.Close(); dt = null;
+        } //DONE
+
+        private void button_SedangBerlangsung_Click(object sender, EventArgs e)
+        {
+            OleDbConnection koneksi = new OleDbConnection(db);
+            koneksi.Open();
+            string query = "";
+            query = "UPDATE MASTER_TAHUNAJARAN SET AKTIF = '0' WHERE AKTIF = '1' "; //NIS
+            string query_2 = "";
+            query_2 = "UPDATE MASTER_TAHUNAJARAN SET AKTIF = '1' WHERE TAHUN = '" + textBox_TA.Text + "' AND SEMESTER='" + textBox_SMSTR.Text + "'"; //NIS
+
+            OleDbCommand komen = new OleDbCommand();
+            komen.CommandText = query;
+            komen.Connection = koneksi;
+            komen.ExecuteNonQuery();
+            OleDbCommand komen_2 = new OleDbCommand();
+            komen_2.CommandText = query_2;
+            komen_2.Connection = koneksi;
+            komen_2.ExecuteNonQuery();
+            koneksi.Close();
+            MessageBox.Show("Data Berhasil Disimpan");
+            DataMasterTahunAjaran();
+        }
+
 
 
         //---------------------MENU MASTER TAHUN AJARAN----------------------//
@@ -311,10 +218,11 @@ namespace Akademik
                 koneksi.Open();
 
                 string query = "";
-                query = "INSERT INTO MASTER_GURU (NAMA_LENGKAP, " +
+                query = "INSERT INTO MASTER_GURU (TGL_DAFTAR, NAMA_LENGKAP, " +
                         "TEMPAT_LAHIR, TANGGAL_LAHIR, JENIS_KELAMIN, TINGGI_BADAN, BERAT_BADAN, AGAMA, " +
                         "KEWARGANEGARAAN, STATUS_PERKAWINAN, ALAMAT, NOMOR_TLPN, EMAIL, " +
                         "PENDIDIKAN, PENGALAMAN_KERJA, KETERAMPILAN, GAMBAR ) VALUES ('"
+                        + DateTime.Now.ToString() + "', '"  //TANGGAL_DAFTAR
                         + textBoxNama_Lengkap.Text.Replace("'", "''") + "', '" //NAMA_LENGKAP
                         + textBoxTempatLahir.Text.Replace("'", "''") + "', '" // TEMPAT_LAHIR
                         + dateTimePickerTglLahir.Value.ToString() + "', '" //TANGGAL_LAHIR
@@ -408,20 +316,6 @@ namespace Akademik
 
         //DATA DATA ADA DIMARI//
         #region DataData definition
-        public void Data()
-        {
-            OleDbConnection koneksi = new OleDbConnection(db);
-            koneksi.Open();
-            String query = "SELECT * FROM MASTER_BIODATA";
-            OleDbCommand komen = new OleDbCommand();
-            komen.CommandText = query;
-            komen.Connection = koneksi;
-            OleDbDataAdapter da = new OleDbDataAdapter(komen);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridViewBiodata.DataSource = dt;
-            koneksi.Close();
-        }
 
         public void DataMasterKeuangan()
         {
@@ -541,7 +435,6 @@ namespace Akademik
         #region LoadData definition
         private void Form1_Load(object sender, EventArgs e)
         {
-            Data();
             DataMasterKeuangan();
             DataMasterJurusan();
             DataMasterTahunAjaran();

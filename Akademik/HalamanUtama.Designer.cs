@@ -29,38 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HalamanUtama));
-            this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.MENU_MASTER = new System.Windows.Forms.ToolStripMenuItem();
             this.MASTER = new System.Windows.Forms.ToolStripMenuItem();
-            this.PSB = new System.Windows.Forms.ToolStripMenuItem();
-            this.PANITIAUJIAN = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.siswaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.KBMPENJADWALAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.MASTER_SISWA = new System.Windows.Forms.ToolStripMenuItem();
+            this.MASTER_GURU = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.MENU_PSB = new System.Windows.Forms.ToolStripMenuItem();
+            this.PSB_PENDAFTARAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.PSB_PANITIAUJIAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.MENU_KEUANGAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.KEUANGAN_SISWABARU = new System.Windows.Forms.ToolStripMenuItem();
+            this.MENU_PENJADWALAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.PENJADWALAN = new System.Windows.Forms.ToolStripMenuItem();
+            this.JADWAL_GURU = new System.Windows.Forms.ToolStripMenuItem();
+            this.JADWAL_KELAS = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
-            // fileMenu
+            // MENU_MASTER
             // 
-            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MENU_MASTER.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.MASTER,
-            this.PSB,
-            this.PANITIAUJIAN,
-            this.toolStripMenuItem1,
             this.toolStripSeparator4,
-            this.toolStripMenuItem2,
-            this.siswaToolStripMenuItem,
-            this.KBMPENJADWALAN,
+            this.MASTER_SISWA,
+            this.MASTER_GURU,
             this.toolStripSeparator5,
             this.exitToolStripMenuItem});
-            this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
-            this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(37, 20);
-            this.fileMenu.Text = "&File";
+            this.MENU_MASTER.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
+            this.MENU_MASTER.Name = "MENU_MASTER";
+            this.MENU_MASTER.Size = new System.Drawing.Size(55, 20);
+            this.MENU_MASTER.Text = "Master";
             // 
             // MASTER
             // 
@@ -69,94 +70,142 @@
             this.MASTER.Name = "MASTER";
             this.MASTER.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.MASTER.ShowShortcutKeys = false;
-            this.MASTER.Size = new System.Drawing.Size(189, 22);
+            this.MASTER.Size = new System.Drawing.Size(130, 22);
             this.MASTER.Text = "Master";
             this.MASTER.Click += new System.EventHandler(this.MASTER_Click);
-            // 
-            // PSB
-            // 
-            this.PSB.Image = ((System.Drawing.Image)(resources.GetObject("PSB.Image")));
-            this.PSB.ImageTransparentColor = System.Drawing.Color.Black;
-            this.PSB.Name = "PSB";
-            this.PSB.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.PSB.ShowShortcutKeys = false;
-            this.PSB.Size = new System.Drawing.Size(189, 22);
-            this.PSB.Text = "Penerimaan Siswa Baru";
-            this.PSB.Click += new System.EventHandler(this.PSB_Click);
-            // 
-            // PANITIAUJIAN
-            // 
-            this.PANITIAUJIAN.Image = ((System.Drawing.Image)(resources.GetObject("PANITIAUJIAN.Image")));
-            this.PANITIAUJIAN.ImageTransparentColor = System.Drawing.Color.Black;
-            this.PANITIAUJIAN.Name = "PANITIAUJIAN";
-            this.PANITIAUJIAN.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.PANITIAUJIAN.ShowShortcutKeys = false;
-            this.PANITIAUJIAN.Size = new System.Drawing.Size(189, 22);
-            this.PANITIAUJIAN.Text = "Panitian Ujian";
-            this.PANITIAUJIAN.Click += new System.EventHandler(this.PANITIAUJIAN_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem1.Image")));
-            this.toolStripMenuItem1.ImageTransparentColor = System.Drawing.Color.Black;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.toolStripMenuItem1.ShowShortcutKeys = false;
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
-            this.toolStripMenuItem1.Text = "Keuangan";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(127, 6);
             // 
-            // toolStripMenuItem2
+            // MASTER_SISWA
             // 
-            this.toolStripMenuItem2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripMenuItem2.Image")));
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(189, 22);
-            this.toolStripMenuItem2.Text = "Siswa";
-            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
+            this.MASTER_SISWA.Image = ((System.Drawing.Image)(resources.GetObject("MASTER_SISWA.Image")));
+            this.MASTER_SISWA.Name = "MASTER_SISWA";
+            this.MASTER_SISWA.Size = new System.Drawing.Size(130, 22);
+            this.MASTER_SISWA.Text = "Data Siswa";
+            this.MASTER_SISWA.Click += new System.EventHandler(this.MASTER_SISWA_Click);
             // 
-            // siswaToolStripMenuItem
+            // MASTER_GURU
             // 
-            this.siswaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("siswaToolStripMenuItem.Image")));
-            this.siswaToolStripMenuItem.Name = "siswaToolStripMenuItem";
-            this.siswaToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.siswaToolStripMenuItem.Text = "Guru";
-            // 
-            // KBMPENJADWALAN
-            // 
-            this.KBMPENJADWALAN.Image = ((System.Drawing.Image)(resources.GetObject("KBMPENJADWALAN.Image")));
-            this.KBMPENJADWALAN.ImageTransparentColor = System.Drawing.Color.Black;
-            this.KBMPENJADWALAN.Name = "KBMPENJADWALAN";
-            this.KBMPENJADWALAN.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.KBMPENJADWALAN.ShowShortcutKeys = false;
-            this.KBMPENJADWALAN.Size = new System.Drawing.Size(189, 22);
-            this.KBMPENJADWALAN.Text = "KBM/Penjadwalan";
-            this.KBMPENJADWALAN.Click += new System.EventHandler(this.KBMPENJADWALAN_Click);
+            this.MASTER_GURU.Image = ((System.Drawing.Image)(resources.GetObject("MASTER_GURU.Image")));
+            this.MASTER_GURU.Name = "MASTER_GURU";
+            this.MASTER_GURU.Size = new System.Drawing.Size(130, 22);
+            this.MASTER_GURU.Text = "Data Guru";
+            this.MASTER_GURU.Click += new System.EventHandler(this.MASTER_GURU_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(186, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(127, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             // 
             // menuStrip
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileMenu});
+            this.MENU_MASTER,
+            this.MENU_PSB,
+            this.MENU_KEUANGAN,
+            this.MENU_PENJADWALAN});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(796, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
+            // 
+            // MENU_PSB
+            // 
+            this.MENU_PSB.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PSB_PENDAFTARAN,
+            this.PSB_PANITIAUJIAN});
+            this.MENU_PSB.Name = "MENU_PSB";
+            this.MENU_PSB.Size = new System.Drawing.Size(141, 20);
+            this.MENU_PSB.Text = "Penerimaan Siswa Baru";
+            // 
+            // PSB_PENDAFTARAN
+            // 
+            this.PSB_PENDAFTARAN.Image = ((System.Drawing.Image)(resources.GetObject("PSB_PENDAFTARAN.Image")));
+            this.PSB_PENDAFTARAN.ImageTransparentColor = System.Drawing.Color.Black;
+            this.PSB_PENDAFTARAN.Name = "PSB_PENDAFTARAN";
+            this.PSB_PENDAFTARAN.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.PSB_PENDAFTARAN.ShowShortcutKeys = false;
+            this.PSB_PENDAFTARAN.Size = new System.Drawing.Size(140, 22);
+            this.PSB_PENDAFTARAN.Text = "Pendaftaran";
+            this.PSB_PENDAFTARAN.Click += new System.EventHandler(this.PSB_PENDAFTARAN_Click);
+            // 
+            // PSB_PANITIAUJIAN
+            // 
+            this.PSB_PANITIAUJIAN.Image = ((System.Drawing.Image)(resources.GetObject("PSB_PANITIAUJIAN.Image")));
+            this.PSB_PANITIAUJIAN.ImageTransparentColor = System.Drawing.Color.Black;
+            this.PSB_PANITIAUJIAN.Name = "PSB_PANITIAUJIAN";
+            this.PSB_PANITIAUJIAN.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.PSB_PANITIAUJIAN.ShowShortcutKeys = false;
+            this.PSB_PANITIAUJIAN.Size = new System.Drawing.Size(140, 22);
+            this.PSB_PANITIAUJIAN.Text = "Panitian Ujian";
+            this.PSB_PANITIAUJIAN.Click += new System.EventHandler(this.PSB_PANITIAUJIAN_Click);
+            // 
+            // MENU_KEUANGAN
+            // 
+            this.MENU_KEUANGAN.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.KEUANGAN_SISWABARU});
+            this.MENU_KEUANGAN.ImageTransparentColor = System.Drawing.Color.Black;
+            this.MENU_KEUANGAN.Name = "MENU_KEUANGAN";
+            this.MENU_KEUANGAN.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.MENU_KEUANGAN.ShowShortcutKeys = false;
+            this.MENU_KEUANGAN.Size = new System.Drawing.Size(72, 20);
+            this.MENU_KEUANGAN.Text = "Keuangan";
+            // 
+            // KEUANGAN_SISWABARU
+            // 
+            this.KEUANGAN_SISWABARU.Image = ((System.Drawing.Image)(resources.GetObject("KEUANGAN_SISWABARU.Image")));
+            this.KEUANGAN_SISWABARU.Name = "KEUANGAN_SISWABARU";
+            this.KEUANGAN_SISWABARU.Size = new System.Drawing.Size(186, 22);
+            this.KEUANGAN_SISWABARU.Text = "Keuangan Siswa Baru";
+            this.KEUANGAN_SISWABARU.Click += new System.EventHandler(this.KEUANGAN_SISWABARU_Click);
+            // 
+            // MENU_PENJADWALAN
+            // 
+            this.MENU_PENJADWALAN.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.PENJADWALAN,
+            this.JADWAL_GURU,
+            this.JADWAL_KELAS});
+            this.MENU_PENJADWALAN.Name = "MENU_PENJADWALAN";
+            this.MENU_PENJADWALAN.Size = new System.Drawing.Size(86, 20);
+            this.MENU_PENJADWALAN.Text = "Penjadwalan";
+            // 
+            // PENJADWALAN
+            // 
+            this.PENJADWALAN.Image = ((System.Drawing.Image)(resources.GetObject("PENJADWALAN.Image")));
+            this.PENJADWALAN.Name = "PENJADWALAN";
+            this.PENJADWALAN.Size = new System.Drawing.Size(152, 22);
+            this.PENJADWALAN.Text = "Penjadwalan";
+            this.PENJADWALAN.Click += new System.EventHandler(this.PENJADWALAN_Click);
+            // 
+            // JADWAL_GURU
+            // 
+            this.JADWAL_GURU.Image = ((System.Drawing.Image)(resources.GetObject("JADWAL_GURU.Image")));
+            this.JADWAL_GURU.ImageTransparentColor = System.Drawing.Color.Black;
+            this.JADWAL_GURU.Name = "JADWAL_GURU";
+            this.JADWAL_GURU.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.JADWAL_GURU.ShowShortcutKeys = false;
+            this.JADWAL_GURU.Size = new System.Drawing.Size(152, 22);
+            this.JADWAL_GURU.Text = "Jadwal Guru";
+            // 
+            // JADWAL_KELAS
+            // 
+            this.JADWAL_KELAS.Image = ((System.Drawing.Image)(resources.GetObject("JADWAL_KELAS.Image")));
+            this.JADWAL_KELAS.ImageTransparentColor = System.Drawing.Color.Black;
+            this.JADWAL_KELAS.Name = "JADWAL_KELAS";
+            this.JADWAL_KELAS.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
+            this.JADWAL_KELAS.ShowShortcutKeys = false;
+            this.JADWAL_KELAS.Size = new System.Drawing.Size(152, 22);
+            this.JADWAL_KELAS.Text = "Jadwal Kelas";
             // 
             // HalamanUtama
             // 
@@ -178,18 +227,23 @@
         }
         #endregion
 
-        private System.Windows.Forms.ToolStripMenuItem fileMenu;
+        private System.Windows.Forms.ToolStripMenuItem MENU_MASTER;
         private System.Windows.Forms.ToolStripMenuItem MASTER;
-        private System.Windows.Forms.ToolStripMenuItem PSB;
-        private System.Windows.Forms.ToolStripMenuItem PANITIAUJIAN;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
-        private System.Windows.Forms.ToolStripMenuItem KBMPENJADWALAN;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem siswaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem MASTER_GURU;
+        private System.Windows.Forms.ToolStripMenuItem MASTER_SISWA;
+        private System.Windows.Forms.ToolStripMenuItem MENU_PSB;
+        private System.Windows.Forms.ToolStripMenuItem PSB_PENDAFTARAN;
+        private System.Windows.Forms.ToolStripMenuItem PSB_PANITIAUJIAN;
+        private System.Windows.Forms.ToolStripMenuItem MENU_KEUANGAN;
+        private System.Windows.Forms.ToolStripMenuItem MENU_PENJADWALAN;
+        private System.Windows.Forms.ToolStripMenuItem JADWAL_KELAS;
+        private System.Windows.Forms.ToolStripMenuItem JADWAL_GURU;
+        private System.Windows.Forms.ToolStripMenuItem KEUANGAN_SISWABARU;
+        private System.Windows.Forms.ToolStripMenuItem PENJADWALAN;
 
     }
 }
