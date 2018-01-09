@@ -67,6 +67,13 @@ namespace Akademik
             page.Show();
         }
 
+        private void cETToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CetakRapot page = new CetakRapot();
+            page.MdiParent = this;
+            page.Show();
+        }
+
 
 
 

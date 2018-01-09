@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage_KartuSiswa = new System.Windows.Forms.TabPage();
+            this.button_Cetak = new System.Windows.Forms.Button();
             this.textBox_EmailSiswa = new System.Windows.Forms.TextBox();
             this.textBox_AlamatSiswa = new System.Windows.Forms.TextBox();
             this.textBox_KelasSiswa = new System.Windows.Forms.TextBox();
@@ -61,7 +62,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button_Cetak = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDaftarSiswa)).BeginInit();
             this.tabControlSiswa.SuspendLayout();
             this.Data_Siswa.SuspendLayout();
@@ -107,7 +107,7 @@
             this.dataGridViewDaftarSiswa.Name = "dataGridViewDaftarSiswa";
             this.dataGridViewDaftarSiswa.Size = new System.Drawing.Size(874, 346);
             this.dataGridViewDaftarSiswa.TabIndex = 9;
-            this.dataGridViewDaftarSiswa.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDaftarSiswa_CellContentClick);
+            this.dataGridViewDaftarSiswa.DoubleClick += new System.EventHandler(this.dataGridViewDaftarSiswa_DoubleClick);
             // 
             // textBoxKelasLama
             // 
@@ -303,6 +303,16 @@
             this.tabPage_KartuSiswa.Text = "Kartu Tanda Siswa";
             this.tabPage_KartuSiswa.UseVisualStyleBackColor = true;
             // 
+            // button_Cetak
+            // 
+            this.button_Cetak.Location = new System.Drawing.Point(607, 355);
+            this.button_Cetak.Name = "button_Cetak";
+            this.button_Cetak.Size = new System.Drawing.Size(89, 30);
+            this.button_Cetak.TabIndex = 13;
+            this.button_Cetak.Text = "Cetak Kartu";
+            this.button_Cetak.UseVisualStyleBackColor = true;
+            this.button_Cetak.Click += new System.EventHandler(this.button_Cetak_Click);
+            // 
             // textBox_EmailSiswa
             // 
             this.textBox_EmailSiswa.Location = new System.Drawing.Point(193, 322);
@@ -400,16 +410,6 @@
             this.label7.Size = new System.Drawing.Size(179, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "KARTU TANDA SISWA";
-            // 
-            // button_Cetak
-            // 
-            this.button_Cetak.Location = new System.Drawing.Point(607, 355);
-            this.button_Cetak.Name = "button_Cetak";
-            this.button_Cetak.Size = new System.Drawing.Size(89, 30);
-            this.button_Cetak.TabIndex = 13;
-            this.button_Cetak.Text = "Cetak Kartu";
-            this.button_Cetak.UseVisualStyleBackColor = true;
-            this.button_Cetak.Click += new System.EventHandler(this.button_Cetak_Click);
             // 
             // Siswa
             // 

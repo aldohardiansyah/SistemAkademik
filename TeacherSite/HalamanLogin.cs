@@ -50,7 +50,7 @@ namespace TeacherSite
                 if (dt_2.Rows.Count > 0)
                 {
                     passingText = textBox_TSNIP.Text;
-                    HalamanTSGuru halaman = new HalamanTSGuru();
+                    HalamanTSWali halaman = new HalamanTSWali();
                     halaman.Show();
 
                     textBox_TSNIP.Clear();

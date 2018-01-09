@@ -245,7 +245,7 @@ namespace Akademik
         {
             OleDbConnection koneksi = new OleDbConnection(db);
             koneksi.Open();
-            string query = "SELECT * FROM DATA_JADWAL WHERE HARI = '" + comboBoxJadwalHari.Text + "' AND JAMKE = '" + comboBoxJadwalJam.Text + "' AND KELAS = '" + comboBoxJadwalKelas.Text + "' ";
+            string query = "SELECT * FROM DATA_JADWAL WHERE HARI = '" + comboBoxJadwalHari.Text + "' AND JAMKE = '" + comboBoxJadwalJam.Text + "' AND NIP = '" + labelKodeGuru.Text + "' AND KD_PELAJARAN = '" + labelKodeMapel.Text + "'";            
             OleDbCommand komen = new OleDbCommand();
             komen.CommandText = query;
             komen.Connection = koneksi;
@@ -255,30 +255,48 @@ namespace Akademik
             koneksi.Close();
             if (dt.Rows.Count > 0)
             {
-                OleDbConnection koneksi_2 = new OleDbConnection(db);
-                koneksi_2.Open();
-                string query_2 = "";
-                query_2 = "UPDATE DATA_JADWAL SET HARI = '" + comboBoxJadwalHari.Text + "', KELAS = '" + comboBoxJadwalKelas.Text + "', NIP = '" + labelKodeGuru.Text + "',  JAMKE = '" + comboBoxJadwalJam.Text + "', KD_PELAJARAN = '" + labelKodeMapel.Text + "' WHERE JAMKE = '" + comboBoxJadwalJam.Text + "' AND KELAS = '" + comboBoxJadwalKelas.Text + "' ";
-                OleDbCommand komen_2 = new OleDbCommand();
-                komen_2.CommandText = query_2;
-                komen_2.Connection = koneksi_2;
-                komen_2.ExecuteNonQuery();
-                MessageBox.Show("Data Berhasil Dirubah");
-                koneksi_2.Close();
+                MessageBox.Show("Jadwal Guru Bentrok");
             }
             else
             {
-                OleDbConnection koneksi_3 = new OleDbConnection(db);
-                koneksi_3.Open();
-                string query_3 = "";
-                query_3 = "INSERT INTO DATA_JADWAL (HARI, KELAS, JAMKE, NIP, KD_PELAJARAN) VALUES ('" + comboBoxJadwalHari.Text.Replace("'", "''") + "', '" + comboBoxJadwalKelas.Text.Replace("'", "''") + "', '" + comboBoxJadwalJam.Text.Replace("'", "''") + "', '" + labelKodeGuru.Text.Replace("'", "''") + "', '" + labelKodeMapel.Text.Replace("'", "''") + "')";
-                OleDbCommand komen_3 = new OleDbCommand();
-                komen_3.CommandText = query_3;
-                komen_3.Connection = koneksi_3;
-                komen_3.ExecuteNonQuery();
-                MessageBox.Show("Data Berhasil Disimpan");
-                koneksi_3.Close();
+                OleDbConnection koneksi_ck = new OleDbConnection(db);
+                koneksi_ck.Open();
+                string query_ck = "SELECT * FROM DATA_JADWAL WHERE HARI = '" + comboBoxJadwalHari.Text + "' AND JAMKE = '" + comboBoxJadwalJam.Text + "' AND KELAS = '" + comboBoxJadwalKelas.Text + "' ";
+                OleDbCommand komen_ck = new OleDbCommand();
+                komen_ck.CommandText = query_ck;
+                komen_ck.Connection = koneksi;
+                OleDbDataAdapter da_ck = new OleDbDataAdapter(komen_ck);
+                DataTable dt_ck = new DataTable();
+                da_ck.Fill(dt_ck);
+                koneksi_ck.Close();
+                if (dt_ck.Rows.Count > 0)
+                {
+                    OleDbConnection koneksi_2 = new OleDbConnection(db);
+                    koneksi_2.Open();
+                    string query_2 = "";
+                    query_2 = "UPDATE DATA_JADWAL SET HARI = '" + comboBoxJadwalHari.Text + "', KELAS = '" + comboBoxJadwalKelas.Text + "', NIP = '" + labelKodeGuru.Text + "',  JAMKE = '" + comboBoxJadwalJam.Text + "', KD_PELAJARAN = '" + labelKodeMapel.Text + "' WHERE HARI = '" + comboBoxJadwalHari.Text + "' AND JAMKE = '" + comboBoxJadwalJam.Text + "' AND KELAS = '" + comboBoxJadwalKelas.Text + "' ";
+                    OleDbCommand komen_2 = new OleDbCommand();
+                    komen_2.CommandText = query_2;
+                    komen_2.Connection = koneksi_2;
+                    komen_2.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil DIRUBAH");
+                    koneksi_2.Close();
+                }
+                else
+                {
+                    OleDbConnection koneksi_3 = new OleDbConnection(db);
+                    koneksi_3.Open();
+                    string query_3 = "";
+                    query_3 = "INSERT INTO DATA_JADWAL (HARI, KELAS, JAMKE, NIP, KD_PELAJARAN) VALUES ('" + comboBoxJadwalHari.Text.Replace("'", "''") + "', '" + comboBoxJadwalKelas.Text.Replace("'", "''") + "', '" + comboBoxJadwalJam.Text.Replace("'", "''") + "', '" + labelKodeGuru.Text.Replace("'", "''") + "', '" + labelKodeMapel.Text.Replace("'", "''") + "')";
+                    OleDbCommand komen_3 = new OleDbCommand();
+                    komen_3.CommandText = query_3;
+                    komen_3.Connection = koneksi_3;
+                    komen_3.ExecuteNonQuery();
+                    MessageBox.Show("Data Berhasil DISIMPAN");
+                    koneksi_3.Close();
+                }
             }
+            
         }
 
 
@@ -314,7 +332,7 @@ namespace Akademik
             comboBox_LihatJadwalGuru.Text = "";
             OleDbConnection koneksi = new OleDbConnection(db);
             koneksi.Open();
-            string query = "SELECT * FROM vw_DATA_JADWAL WHERE KELAS = '" + comboBox_LihatJadwalKelas.Text + "' ORDER BY KELAS ASC, HARI DESC, JAMKE ASC";
+            string query = "SELECT * FROM vw_DATA_JADWAL WHERE KELAS = '" + comboBox_LihatJadwalKelas.Text + "' ORDER BY HARI DESC, JAMKE ASC";
             OleDbCommand cmd = new OleDbCommand();
             cmd.CommandText = query;
             cmd.Connection = koneksi;
@@ -344,7 +362,9 @@ namespace Akademik
         }
 
 
-        //DATA-DATA ADA DIMARI//
+ 
+
+
         private void Penjadwalan_Load(object sender, EventArgs e)
         {
             DataJam();

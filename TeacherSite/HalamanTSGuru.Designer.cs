@@ -59,6 +59,11 @@
             this.comboBox_InputNilaiKelas = new System.Windows.Forms.ComboBox();
             this.dataGridView_InputNilai_Jadwal = new System.Windows.Forms.DataGridView();
             this.tabPage_Input = new System.Windows.Forms.TabPage();
+            this.label26 = new System.Windows.Forms.Label();
+            this.textBoxKet = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.textBoxTotal = new System.Windows.Forms.TextBox();
+            this.textBox_InputKDMAPEL = new System.Windows.Forms.TextBox();
             this.pictureBox_siswa = new System.Windows.Forms.PictureBox();
             this.label25 = new System.Windows.Forms.Label();
             this.button_SimpanNilai = new System.Windows.Forms.Button();
@@ -90,17 +95,12 @@
             this.textBox_InputNama = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.textBox_InputKDMAPEL = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.textBoxKet = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.tabPage_DataNilai = new System.Windows.Forms.TabPage();
+            this.label29 = new System.Windows.Forms.Label();
+            this.comboBox_DataNilaiSiswaMapel = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox_KelasDataNilaiSiswa = new System.Windows.Forms.ComboBox();
             this.dataGridView_DataNilaiSiswa = new System.Windows.Forms.DataGridView();
-            this.label29 = new System.Windows.Forms.Label();
-            this.comboBox_DataNilaiSiswaMapel = new System.Windows.Forms.ComboBox();
             this.tabControl_Main.SuspendLayout();
             this.tabPage_Jadwal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewJadwal)).BeginInit();
@@ -499,6 +499,51 @@
             this.tabPage_Input.Text = "Input Nilai Siswa";
             this.tabPage_Input.UseVisualStyleBackColor = true;
             // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(114, 488);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(90, 16);
+            this.label26.TabIndex = 100;
+            this.label26.Text = "KETERANGAN";
+            // 
+            // textBoxKet
+            // 
+            this.textBoxKet.Location = new System.Drawing.Point(266, 484);
+            this.textBoxKet.Name = "textBoxKet";
+            this.textBoxKet.ReadOnly = true;
+            this.textBoxKet.Size = new System.Drawing.Size(140, 20);
+            this.textBoxKet.TabIndex = 99;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(114, 459);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(87, 16);
+            this.label27.TabIndex = 98;
+            this.label27.Text = "TOTAL NILAI";
+            // 
+            // textBoxTotal
+            // 
+            this.textBoxTotal.Location = new System.Drawing.Point(266, 455);
+            this.textBoxTotal.Name = "textBoxTotal";
+            this.textBoxTotal.ReadOnly = true;
+            this.textBoxTotal.Size = new System.Drawing.Size(85, 20);
+            this.textBoxTotal.TabIndex = 97;
+            // 
+            // textBox_InputKDMAPEL
+            // 
+            this.textBox_InputKDMAPEL.Enabled = false;
+            this.textBox_InputKDMAPEL.Location = new System.Drawing.Point(429, 186);
+            this.textBox_InputKDMAPEL.Name = "textBox_InputKDMAPEL";
+            this.textBox_InputKDMAPEL.Size = new System.Drawing.Size(37, 20);
+            this.textBox_InputKDMAPEL.TabIndex = 96;
+            this.textBox_InputKDMAPEL.Visible = false;
+            // 
             // pictureBox_siswa
             // 
             this.pictureBox_siswa.Location = new System.Drawing.Point(521, 63);
@@ -766,51 +811,6 @@
             this.label11.TabIndex = 65;
             this.label11.Text = "Input Data Nilai Siswa";
             // 
-            // textBox_InputKDMAPEL
-            // 
-            this.textBox_InputKDMAPEL.Enabled = false;
-            this.textBox_InputKDMAPEL.Location = new System.Drawing.Point(429, 186);
-            this.textBox_InputKDMAPEL.Name = "textBox_InputKDMAPEL";
-            this.textBox_InputKDMAPEL.Size = new System.Drawing.Size(37, 20);
-            this.textBox_InputKDMAPEL.TabIndex = 96;
-            this.textBox_InputKDMAPEL.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(114, 488);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(90, 16);
-            this.label26.TabIndex = 100;
-            this.label26.Text = "KETERANGAN";
-            // 
-            // textBoxKet
-            // 
-            this.textBoxKet.Location = new System.Drawing.Point(266, 484);
-            this.textBoxKet.Name = "textBoxKet";
-            this.textBoxKet.ReadOnly = true;
-            this.textBoxKet.Size = new System.Drawing.Size(140, 20);
-            this.textBoxKet.TabIndex = 99;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(114, 459);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(87, 16);
-            this.label27.TabIndex = 98;
-            this.label27.Text = "TOTAL NILAI";
-            // 
-            // textBoxTotal
-            // 
-            this.textBoxTotal.Location = new System.Drawing.Point(266, 455);
-            this.textBoxTotal.Name = "textBoxTotal";
-            this.textBoxTotal.ReadOnly = true;
-            this.textBoxTotal.Size = new System.Drawing.Size(85, 20);
-            this.textBoxTotal.TabIndex = 97;
-            // 
             // tabPage_DataNilai
             // 
             this.tabPage_DataNilai.Controls.Add(this.label29);
@@ -824,6 +824,26 @@
             this.tabPage_DataNilai.TabIndex = 2;
             this.tabPage_DataNilai.Text = "Data Nilai Siswa";
             this.tabPage_DataNilai.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(266, 35);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(78, 13);
+            this.label29.TabIndex = 71;
+            this.label29.Text = "Mata Pelajaran";
+            // 
+            // comboBox_DataNilaiSiswaMapel
+            // 
+            this.comboBox_DataNilaiSiswaMapel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox_DataNilaiSiswaMapel.FormattingEnabled = true;
+            this.comboBox_DataNilaiSiswaMapel.Location = new System.Drawing.Point(396, 32);
+            this.comboBox_DataNilaiSiswaMapel.Name = "comboBox_DataNilaiSiswaMapel";
+            this.comboBox_DataNilaiSiswaMapel.Size = new System.Drawing.Size(113, 21);
+            this.comboBox_DataNilaiSiswaMapel.TabIndex = 70;
+            this.comboBox_DataNilaiSiswaMapel.SelectedIndexChanged += new System.EventHandler(this.comboBox_DataNilaiSiswaMapel_SelectedIndexChanged);
             // 
             // label28
             // 
@@ -856,26 +876,6 @@
             this.dataGridView_DataNilaiSiswa.Size = new System.Drawing.Size(738, 330);
             this.dataGridView_DataNilaiSiswa.TabIndex = 61;
             // 
-            // label29
-            // 
-            this.label29.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(266, 35);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(78, 13);
-            this.label29.TabIndex = 71;
-            this.label29.Text = "Mata Pelajaran";
-            // 
-            // comboBox_DataNilaiSiswaMapel
-            // 
-            this.comboBox_DataNilaiSiswaMapel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox_DataNilaiSiswaMapel.FormattingEnabled = true;
-            this.comboBox_DataNilaiSiswaMapel.Location = new System.Drawing.Point(396, 32);
-            this.comboBox_DataNilaiSiswaMapel.Name = "comboBox_DataNilaiSiswaMapel";
-            this.comboBox_DataNilaiSiswaMapel.Size = new System.Drawing.Size(113, 21);
-            this.comboBox_DataNilaiSiswaMapel.TabIndex = 70;
-            this.comboBox_DataNilaiSiswaMapel.SelectedIndexChanged += new System.EventHandler(this.comboBox_DataNilaiSiswaMapel_SelectedIndexChanged);
-            // 
             // HalamanTSGuru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -883,7 +883,7 @@
             this.ClientSize = new System.Drawing.Size(772, 470);
             this.Controls.Add(this.tabControl_Main);
             this.Name = "HalamanTSGuru";
-            this.Text = "HalamanTSGuru";
+            this.Text = "Teacher Site";
             this.Load += new System.EventHandler(this.HalamanTSGuru_Load);
             this.tabControl_Main.ResumeLayout(false);
             this.tabPage_Jadwal.ResumeLayout(false);

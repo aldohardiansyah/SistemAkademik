@@ -166,7 +166,7 @@ namespace Akademik
         {
             OleDbConnection koneksi = new OleDbConnection(db);
             koneksi.Open();
-            String query = "SELECT * FROM  vw_KEUANGAN_PENDAFTARAN";
+            String query = "SELECT * FROM  vw_KEUANGAN_PENDAFTARAN ORDER BY TANGGAL_DAFTAR DESC";
             OleDbCommand komen = new OleDbCommand();
             komen.CommandText = query;
             komen.Connection = koneksi;

@@ -43,6 +43,7 @@ namespace Akademik
 
         private void dataGridViewDataSiswa_DoubleClick(object sender, EventArgs e)
         {
+            comboBoxKelasBaru.Items.Clear();
             OleDbConnection koneksi = new OleDbConnection(db);
             koneksi.Open();
             tabControlSiswa.SelectTab(Tambah_Kelas);
@@ -112,6 +113,7 @@ namespace Akademik
             komen.ExecuteNonQuery();
             koneksi.Close();
             MessageBox.Show("Data Berhasil Disimpan");
+            DataSiswa_2();
             DataSiswa();
             comboBoxKelasBaru.Items.Clear();
         }
@@ -175,13 +177,37 @@ namespace Akademik
             DataSiswa_2();
         }
 
-        private void dataGridViewDaftarSiswa_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button_Cetak_Click(object sender, EventArgs e) //fungsi di button nya copy isinya aja//
+        {
+            PrintDocument pd = new PrintDocument();
+            pd.PrintPage += new PrintPageEventHandler(PrintImage);
+            pd.Print();
+        }
+
+
+        void PrintImage(object o, PrintPageEventArgs e) //fungsi tambahan sendiri copy aja semua//
+        {
+            int x = SystemInformation.WorkingArea.X;
+            int y = SystemInformation.WorkingArea.Y;
+            int width = this.Width;
+            int height = this.Height;
+
+            Rectangle bounds = new Rectangle(x, y, width, height);
+
+            Bitmap img = new Bitmap(width, height);
+
+            this.DrawToBitmap(img, bounds);
+            Point p = new Point(100, 100);
+            e.Graphics.DrawImage(img, p);
+        }
+
+        private void dataGridViewDaftarSiswa_DoubleClick(object sender, EventArgs e)
         {
             OleDbConnection koneksi = new OleDbConnection(db);
             koneksi.Open();
             tabControlSiswa.SelectTab(tabPage_KartuSiswa);
 
-            string IDCari = dataGridViewDataSiswa.CurrentRow.Cells["NIS"].Value.ToString();
+            string IDCari = dataGridViewDaftarSiswa.CurrentRow.Cells["NIS"].Value.ToString();
 
             string query = "";
             query = "SELECT * FROM MASTER_SISWA WHERE NIS = '" + IDCari + "'";
@@ -215,30 +241,6 @@ namespace Akademik
 
                 #endregion
             }
-        }
-
-        private void button_Cetak_Click(object sender, EventArgs e) //fungsi di button nya copy isinya aja//
-        {
-            PrintDocument pd = new PrintDocument();
-            pd.PrintPage += new PrintPageEventHandler(PrintImage);
-            pd.Print();
-        }
-
-
-        void PrintImage(object o, PrintPageEventArgs e) //fungsi tambahan sendiri copy aja semua//
-        {
-            int x = SystemInformation.WorkingArea.X;
-            int y = SystemInformation.WorkingArea.Y;
-            int width = this.Width;
-            int height = this.Height;
-
-            Rectangle bounds = new Rectangle(x, y, width, height);
-
-            Bitmap img = new Bitmap(width, height);
-
-            this.DrawToBitmap(img, bounds);
-            Point p = new Point(100, 100);
-            e.Graphics.DrawImage(img, p);
         }
 
 

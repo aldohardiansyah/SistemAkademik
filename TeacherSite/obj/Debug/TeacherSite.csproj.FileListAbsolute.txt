@@ -7,3 +7,4 @@ D:\KadudApp\Akademik\TeacherSite\bin\Debug\TeacherSite.pdb
 D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.exe
 D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.pdb
 D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.HalamanTSGuru.resources
+D:\KadudApp\Akademik\TeacherSite\obj\Debug\TeacherSite.HalamanTSWali.resources

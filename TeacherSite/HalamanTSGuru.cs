@@ -349,59 +349,78 @@ namespace TeacherSite
                     if (int.Parse(textBoxTotal.Text) >= 70)
                     {
                         textBoxKet.Text = "TERLAMPAUI";
-
-                        OleDbConnection connect = new OleDbConnection(db);
-                        connect.Open();
-                        OleDbCommand command = new OleDbCommand();
-                        command.Connection = connect;
-
-                        string queryCari = "";
-                        queryCari = "SELECT * FROM DATA_NILAI WHERE "
-                        + "NIS = '" + textBox_InputNIS.Text + "' AND "
-                        + "KD_PELAJARAN = '" + textBox_InputKDMAPEL.Text + "' AND "
-                        + "SEMESTER = '" + textBox_InputSemester.Text + "' AND "
-                        + "TAHUN_AJARAN = '" + textBox_InputTA.Text + "' ";
-                        command.CommandText = queryCari;
-                        OleDbDataAdapter da = new OleDbDataAdapter(command);
-                        DataTable dt = new DataTable(queryCari);
-                        da.Fill(dt);
-
-                        if (dt.Rows.Count > 0)
-                        {
-                            MessageBox.Show("Data Sudah Ada");
-                        }
-
-                        else
-                        {
-                            string query = "";
-                            query = ("INSERT INTO DATA_NILAI ("
-                            + "NIS, "
-                            + "KD_PELAJARAN, "
-                            + "NILAI, "
-                            + "KETERANGAN, "
-                            + "SEMESTER, "
-                            + "TAHUN_AJARAN) VALUES ('"
-
-                            + textBox_InputNIS.Text + "', '"
-                            + textBox_InputKDMAPEL.Text + "', '"
-                            + textBoxTotal.Text + "', '"
-                            + textBoxKet.Text + "', '"
-                            + textBox_InputSemester.Text + "', '"
-                            + textBox_InputTA.Text + "')");
-
-                            OleDbCommand cmd = new OleDbCommand();
-                            cmd.CommandText = query;
-                            cmd.Connection = connect;
-
-                            cmd.ExecuteNonQuery();
-                            connect.Close();
-                            MessageBox.Show("Data Tersimpan");
-                        }
-                        //DataNilaiSiswa();
                     }
                     else
                     {
                         textBoxKet.Text = "BELUM TERLAMPAUI";
+                    }
+
+                    OleDbConnection connect = new OleDbConnection(db);
+                    connect.Open();
+                    OleDbCommand command = new OleDbCommand();
+                    command.Connection = connect;
+
+                    string queryCari = "";
+                    queryCari = "SELECT * FROM DATA_NILAI WHERE "
+                    + "NIS = '" + textBox_InputNIS.Text + "' AND "
+                    + "KD_PELAJARAN = '" + textBox_InputKDMAPEL.Text + "' AND "
+                    + "SEMESTER = '" + textBox_InputSemester.Text + "' AND "
+                    + "TAHUN_AJARAN = '" + textBox_InputTA.Text + "' ";
+                    command.CommandText = queryCari;
+                    OleDbDataAdapter da = new OleDbDataAdapter(command);
+                    DataTable dt = new DataTable(queryCari);
+                    da.Fill(dt);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        #region update nilai
+                        string query = "";
+                        query = ("UPDATE DATA_NILAI SET "
+                        + "NILAI = '" + textBoxTotal.Text + "' , "
+                        + "KETERANGAN = '" + textBoxKet.Text + "' "
+                        + "WHERE "
+                        + "NIS = '" + textBox_InputNIS.Text + "' AND "
+                        + "KD_PELAJARAN = '" + textBox_InputKDMAPEL.Text + "' AND "
+                        + "SEMESTER = '" + textBox_InputSemester.Text + "' AND "
+                        + "TAHUN_AJARAN = '" + textBox_InputTA.Text + "' ");
+
+                        OleDbCommand cmd = new OleDbCommand();
+                        cmd.CommandText = query;
+                        cmd.Connection = connect;
+
+                        cmd.ExecuteNonQuery();
+                        connect.Close();
+                        MessageBox.Show("Data Berhasil di Update");
+                        #endregion
+                    }
+
+                    else
+                    {
+                        #region TAMBAH NILAI
+                        string query = "";
+                        query = ("INSERT INTO DATA_NILAI ("
+                        + "NIS, "
+                        + "KD_PELAJARAN, "
+                        + "NILAI, "
+                        + "KETERANGAN, "
+                        + "SEMESTER, "
+                        + "TAHUN_AJARAN) VALUES ('"
+
+                        + textBox_InputNIS.Text + "', '"
+                        + textBox_InputKDMAPEL.Text + "', '"
+                        + textBoxTotal.Text + "', '"
+                        + textBoxKet.Text + "', '"
+                        + textBox_InputSemester.Text + "', '"
+                        + textBox_InputTA.Text + "')");
+
+                        OleDbCommand cmd = new OleDbCommand();
+                        cmd.CommandText = query;
+                        cmd.Connection = connect;
+
+                        cmd.ExecuteNonQuery();
+                        connect.Close();
+                        MessageBox.Show("Data Tersimpan");
+                        #endregion
                     }
                 }
             }
@@ -412,15 +431,15 @@ namespace TeacherSite
             comboBox_DataNilaiSiswaMapel.Items.Clear();
             OleDbConnection koneksi = new OleDbConnection(db);
             koneksi.Open();
-            string query = "SELECT * FROM vw_DATA_NILAI WHERE KELAS = '" + comboBox_KelasDataNilaiSiswa.Text + "' ORDER BY NAMA_LENGKAP ASC";
-            OleDbCommand cmd = new OleDbCommand();
-            cmd.CommandText = query;
-            cmd.Connection = koneksi;
+            //string query = "SELECT * FROM vw_DATA_NILAI WHERE KELAS = '" + comboBox_KelasDataNilaiSiswa.Text + "' ORDER BY NAMA_LENGKAP ASC";
+            //OleDbCommand cmd = new OleDbCommand();
+            //cmd.CommandText = query;
+            //cmd.Connection = koneksi;
 
-            OleDbDataAdapter da = new OleDbDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            dataGridView_DataNilaiSiswa.DataSource = dt;
+            //OleDbDataAdapter da = new OleDbDataAdapter(cmd);
+            //DataTable dt = new DataTable();
+            //da.Fill(dt);
+            //dataGridView_DataNilaiSiswa.DataSource = dt;
 
             string query_2 = "SELECT NAMA_PELAJARAN FROM vw_DATA_JADWAL WHERE NIP = '" + labelNIP.Text + "' AND KELAS = '" + comboBox_KelasDataNilaiSiswa.Text + "' GROUP BY NAMA_PELAJARAN";
             OleDbCommand cmd_2 = new OleDbCommand();

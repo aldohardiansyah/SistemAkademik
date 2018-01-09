@@ -13,3 +13,4 @@ D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.HalamanUtama.resources
 D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.Siswa.resources
 D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.Guru.resources
 D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.Penjadwalan.resources
+D:\KadudApp\Akademik\Akademik\obj\x86\Debug\Akademik.CetakRapot.resources

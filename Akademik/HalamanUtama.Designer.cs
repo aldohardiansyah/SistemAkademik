@@ -44,8 +44,7 @@
             this.KEUANGAN_SISWABARU = new System.Windows.Forms.ToolStripMenuItem();
             this.MENU_PENJADWALAN = new System.Windows.Forms.ToolStripMenuItem();
             this.PENJADWALAN = new System.Windows.Forms.ToolStripMenuItem();
-            this.JADWAL_GURU = new System.Windows.Forms.ToolStripMenuItem();
-            this.JADWAL_KELAS = new System.Windows.Forms.ToolStripMenuItem();
+            this.cETToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,7 +69,7 @@
             this.MASTER.Name = "MASTER";
             this.MASTER.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
             this.MASTER.ShowShortcutKeys = false;
-            this.MASTER.Size = new System.Drawing.Size(130, 22);
+            this.MASTER.Size = new System.Drawing.Size(152, 22);
             this.MASTER.Text = "Master";
             this.MASTER.Click += new System.EventHandler(this.MASTER_Click);
             // 
@@ -112,7 +111,8 @@
             this.MENU_MASTER,
             this.MENU_PSB,
             this.MENU_KEUANGAN,
-            this.MENU_PENJADWALAN});
+            this.MENU_PENJADWALAN,
+            this.cETToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(796, 24);
@@ -172,9 +172,7 @@
             // MENU_PENJADWALAN
             // 
             this.MENU_PENJADWALAN.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.PENJADWALAN,
-            this.JADWAL_GURU,
-            this.JADWAL_KELAS});
+            this.PENJADWALAN});
             this.MENU_PENJADWALAN.Name = "MENU_PENJADWALAN";
             this.MENU_PENJADWALAN.Size = new System.Drawing.Size(86, 20);
             this.MENU_PENJADWALAN.Text = "Penjadwalan";
@@ -187,25 +185,12 @@
             this.PENJADWALAN.Text = "Penjadwalan";
             this.PENJADWALAN.Click += new System.EventHandler(this.PENJADWALAN_Click);
             // 
-            // JADWAL_GURU
+            // cETToolStripMenuItem
             // 
-            this.JADWAL_GURU.Image = ((System.Drawing.Image)(resources.GetObject("JADWAL_GURU.Image")));
-            this.JADWAL_GURU.ImageTransparentColor = System.Drawing.Color.Black;
-            this.JADWAL_GURU.Name = "JADWAL_GURU";
-            this.JADWAL_GURU.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.JADWAL_GURU.ShowShortcutKeys = false;
-            this.JADWAL_GURU.Size = new System.Drawing.Size(152, 22);
-            this.JADWAL_GURU.Text = "Jadwal Guru";
-            // 
-            // JADWAL_KELAS
-            // 
-            this.JADWAL_KELAS.Image = ((System.Drawing.Image)(resources.GetObject("JADWAL_KELAS.Image")));
-            this.JADWAL_KELAS.ImageTransparentColor = System.Drawing.Color.Black;
-            this.JADWAL_KELAS.Name = "JADWAL_KELAS";
-            this.JADWAL_KELAS.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O)));
-            this.JADWAL_KELAS.ShowShortcutKeys = false;
-            this.JADWAL_KELAS.Size = new System.Drawing.Size(152, 22);
-            this.JADWAL_KELAS.Text = "Jadwal Kelas";
+            this.cETToolStripMenuItem.Name = "cETToolStripMenuItem";
+            this.cETToolStripMenuItem.Size = new System.Drawing.Size(115, 20);
+            this.cETToolStripMenuItem.Text = "Cetak Rapot Siswa";
+            this.cETToolStripMenuItem.Click += new System.EventHandler(this.cETToolStripMenuItem_Click);
             // 
             // HalamanUtama
             // 
@@ -240,10 +225,9 @@
         private System.Windows.Forms.ToolStripMenuItem PSB_PANITIAUJIAN;
         private System.Windows.Forms.ToolStripMenuItem MENU_KEUANGAN;
         private System.Windows.Forms.ToolStripMenuItem MENU_PENJADWALAN;
-        private System.Windows.Forms.ToolStripMenuItem JADWAL_KELAS;
-        private System.Windows.Forms.ToolStripMenuItem JADWAL_GURU;
         private System.Windows.Forms.ToolStripMenuItem KEUANGAN_SISWABARU;
         private System.Windows.Forms.ToolStripMenuItem PENJADWALAN;
+        private System.Windows.Forms.ToolStripMenuItem cETToolStripMenuItem;
 
     }
 }

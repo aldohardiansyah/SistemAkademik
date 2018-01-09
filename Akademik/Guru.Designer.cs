@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.tab_PembagianMataPelajaran = new System.Windows.Forms.TabPage();
+            this.textBoxID = new System.Windows.Forms.TextBox();
             this.textBoxMapel = new System.Windows.Forms.TextBox();
             this.textBoxNIP = new System.Windows.Forms.TextBox();
             this.textBoxNamaGuru = new System.Windows.Forms.TextBox();
@@ -62,7 +63,6 @@
             this.buttonKonfirmWali = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBoxID = new System.Windows.Forms.TextBox();
             this.tab_PembagianMataPelajaran.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMapelGuru)).BeginInit();
             this.Tab_DataGuru.SuspendLayout();
@@ -93,6 +93,14 @@
             this.tab_PembagianMataPelajaran.TabIndex = 1;
             this.tab_PembagianMataPelajaran.Text = "Pembagian Mata Pelajaran";
             this.tab_PembagianMataPelajaran.UseVisualStyleBackColor = true;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.Enabled = false;
+            this.textBoxID.Location = new System.Drawing.Point(242, 21);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(39, 20);
+            this.textBoxID.TabIndex = 22;
             // 
             // textBoxMapel
             // 
@@ -193,7 +201,7 @@
             this.Tab_DataGuru.Location = new System.Drawing.Point(4, 22);
             this.Tab_DataGuru.Name = "Tab_DataGuru";
             this.Tab_DataGuru.Padding = new System.Windows.Forms.Padding(3);
-            this.Tab_DataGuru.Size = new System.Drawing.Size(831, 500);
+            this.Tab_DataGuru.Size = new System.Drawing.Size(831, 415);
             this.Tab_DataGuru.TabIndex = 0;
             this.Tab_DataGuru.Text = "Data Guru";
             this.Tab_DataGuru.UseVisualStyleBackColor = true;
@@ -217,7 +225,7 @@
             this.dataGridViewDataGuru.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewDataGuru.Location = new System.Drawing.Point(8, 87);
             this.dataGridViewDataGuru.Name = "dataGridViewDataGuru";
-            this.dataGridViewDataGuru.Size = new System.Drawing.Size(817, 413);
+            this.dataGridViewDataGuru.Size = new System.Drawing.Size(817, 308);
             this.dataGridViewDataGuru.TabIndex = 0;
             this.dataGridViewDataGuru.DoubleClick += new System.EventHandler(this.dataGridViewDataGuru_DoubleClick);
             // 
@@ -231,7 +239,7 @@
             this.tabControlGuru.Location = new System.Drawing.Point(0, 0);
             this.tabControlGuru.Name = "tabControlGuru";
             this.tabControlGuru.SelectedIndex = 0;
-            this.tabControlGuru.Size = new System.Drawing.Size(839, 526);
+            this.tabControlGuru.Size = new System.Drawing.Size(839, 441);
             this.tabControlGuru.TabIndex = 2;
             // 
             // Tab_PageTeachSite
@@ -450,19 +458,11 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Nama";
             // 
-            // textBoxID
-            // 
-            this.textBoxID.Enabled = false;
-            this.textBoxID.Location = new System.Drawing.Point(242, 21);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(39, 20);
-            this.textBoxID.TabIndex = 22;
-            // 
             // Guru
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 526);
+            this.ClientSize = new System.Drawing.Size(839, 441);
             this.Controls.Add(this.tabControlGuru);
             this.Name = "Guru";
             this.Text = "Guru";
